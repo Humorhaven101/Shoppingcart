@@ -1,0 +1,21 @@
+# input your budget
+
+budget = float(input("Enter your budget for shopping today: "))
+total_cost = 0
+#ask for the item and ask for more items
+
+while True:
+    item = input("Enter a shopping item: ")
+    price = float(input(f"Enter the price of {item}: "))
+    total_cost += price
+
+    add_another = input("Do you want to add another item? (y/n): ").lower()
+    if add_another != 'y':
+        break
+
+print(f"Total cost: {total_cost}")
+
+if total_cost <= budget:
+    print("Good job, you're within your budget!")
+else:
+    print("Stop buying, you've exceeded your budget.")
